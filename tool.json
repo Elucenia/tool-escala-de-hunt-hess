@@ -1,0 +1,222 @@
+{
+  "tool": {
+    "id": "escala-de-hunt-hess",
+    "title": "Escala de Hunt-Hess",
+    "short": "Gravidade clínica da hemorragia subaracnóidea",
+    "spec": [
+      "neurocirurgia",
+      "neurologia",
+      "medicina-intensiva"
+    ],
+    "tier": 1,
+    "desc": "Escala de Hunt-Hess: grau clínico da hemorragia subaracnóidea aneurismática (I a V), com a mortalidade cirúrgica da série original.",
+    "lead": "Gradua a gravidade clínica da hemorragia subaracnóidea por aneurisma na admissão, pelo nível de consciência, cefaleia, rigidez de nuca e déficit.",
+    "fields": [
+      [
+        "grau",
+        "Quadro clínico",
+        "sel",
+        {
+          "opts": {
+            "1": "I – Assintomático ou cefaleia mínima e leve rigidez de nuca",
+            "2": "II – Cefaleia moderada a grave, rigidez de nuca; sem déficit além de paralisia de nervo craniano",
+            "3": "III – Sonolência, confusão ou déficit focal leve",
+            "4": "IV – Estupor, hemiparesia moderada a grave; possível rigidez de descerebração precoce e distúrbios vegetativos",
+            "5": "V – Coma profundo, rigidez de descerebração, aparência moribunda"
+          }
+        }
+      ]
+    ],
+    "score": {
+      "label": "Grau de Hunt-Hess",
+      "unit": "de 5",
+      "bands": [
+        [
+          1,
+          "low",
+          "Grau I: mortalidade cirúrgica de 11% na série original",
+          ""
+        ],
+        [
+          2,
+          "low",
+          "Grau II: mortalidade cirúrgica de 26% na série original",
+          ""
+        ],
+        [
+          3,
+          "mid",
+          "Grau III: mortalidade cirúrgica de 37% na série original",
+          ""
+        ],
+        [
+          4,
+          "high",
+          "Grau IV: mortalidade cirúrgica de 71% na série original",
+          ""
+        ],
+        [
+          5,
+          "high",
+          "Grau V: mortalidade cirúrgica de 100% na série original",
+          ""
+        ]
+      ]
+    },
+    "formula": "<p>Escolha o grau que descreve o paciente. Na proposta original, <strong>soma-se um grau</strong> na presença de doença sistêmica grave (hipertensão, diabetes, aterosclerose grave, doença pulmonar crônica) ou vasoespasmo grave na arteriografia.</p>",
+    "table": [
+      [
+        "Grau",
+        "Quadro",
+        "Mortalidade cirúrgica (1968)"
+      ],
+      [
+        "I",
+        "Assintomático ou cefaleia mínima",
+        "11%"
+      ],
+      [
+        "II",
+        "Cefaleia moderada a grave, rigidez de nuca",
+        "26%"
+      ],
+      [
+        "III",
+        "Sonolência, confusão, déficit leve",
+        "37%"
+      ],
+      [
+        "IV",
+        "Estupor, hemiparesia",
+        "71%"
+      ],
+      [
+        "V",
+        "Coma, descerebração",
+        "100%"
+      ]
+    ],
+    "table_note": "Mortalidade da série cirúrgica de Hunt e Hess (1968). Com o tratamento atual (clipagem ou embolização precoce e UTI neurológica), os números são bem menores; use-os como referência histórica de gravidade.",
+    "tips": [
+      "Graus I a III costumam ser chamados de “bom grau” e IV e V de “mau grau”: a distinção orienta o momento do tratamento do aneurisma e a intensidade do suporte.",
+      "Reclassifique depois de tratar hidrocefalia aguda e crises convulsivas: o grau pode melhorar muito após a derivação ventricular externa.",
+      "A escala tem termos subjetivos (sonolência, estupor) e concordância moderada entre avaliadores; muitos serviços registram também a WFNS, baseada no Glasgow.",
+      "Complete a avaliação com a escala de Fisher modificada (tomografia), que estima o risco de vasoespasmo."
+    ],
+    "sources": [
+      [
+        "Hunt WE, Hess RM. Surgical risk as related to time of intervention in the repair of intracranial aneurysms. J Neurosurg, 1968.",
+        "https://doi.org/10.3171/jns.1968.28.1.0014"
+      ]
+    ],
+    "cases": [
+      [
+        "Cefaleia leve e rigidez de nuca discreta: grau I",
+        {
+          "grau": "1"
+        },
+        {
+          "score": 1,
+          "level": "low",
+          "verdict": "11%"
+        }
+      ],
+      [
+        "Confuso, sem déficit motor importante: grau III",
+        {
+          "grau": "3"
+        },
+        {
+          "score": 3,
+          "level": "mid",
+          "verdict": "37%"
+        }
+      ],
+      [
+        "Estupor com hemiparesia: grau IV",
+        {
+          "grau": "4"
+        },
+        {
+          "score": 4,
+          "level": "high",
+          "verdict": "71%"
+        }
+      ]
+    ],
+    "batch": "neuro-mente",
+    "kind": "Escore",
+    "config": {
+      "unit": "de 5",
+      "label": "Grau de Hunt-Hess",
+      "fields": [
+        [
+          "grau",
+          "sel",
+          0
+        ]
+      ],
+      "bands": [
+        [
+          1,
+          "low",
+          "Grau I: mortalidade cirúrgica de 11% na série original",
+          ""
+        ],
+        [
+          2,
+          "low",
+          "Grau II: mortalidade cirúrgica de 26% na série original",
+          ""
+        ],
+        [
+          3,
+          "mid",
+          "Grau III: mortalidade cirúrgica de 37% na série original",
+          ""
+        ],
+        [
+          4,
+          "high",
+          "Grau IV: mortalidade cirúrgica de 71% na série original",
+          ""
+        ],
+        [
+          5,
+          "high",
+          "Grau V: mortalidade cirúrgica de 100% na série original",
+          ""
+        ]
+      ]
+    },
+    "areaId": "neuro-mente",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/neuro-mente.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 3,
+      "passed": 3,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/neuro-mente.php",
+    "sha256": "3ce3a7987a3ec63938e5f21d8d24ec7f7f8880c1b54458ef7046807a89221cac",
+    "bytes": 102818
+  },
+  "clinicalValidation": "not-performed"
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "label": "Cefaleia leve e rigidez de nuca discreta: grau I",
+    "input": {
+      "grau": "1"
+    },
+    "expected": {
+      "score": 1,
+      "level": "low",
+      "verdict": "11%"
+    },
+    "originalInput": {
+      "grau": "1"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Confuso, sem déficit motor importante: grau III",
+    "input": {
+      "grau": "3"
+    },
+    "expected": {
+      "score": 3,
+      "level": "mid",
+      "verdict": "37%"
+    },
+    "originalInput": {
+      "grau": "3"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Estupor com hemiparesia: grau IV",
+    "input": {
+      "grau": "4"
+    },
+    "expected": {
+      "score": 4,
+      "level": "high",
+      "verdict": "71%"
+    },
+    "originalInput": {
+      "grau": "4"
+    },
+    "expandedZeroOptions": []
+  }
+]
