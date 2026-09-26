@@ -1,9 +1,11 @@
-/* ELUCENIA standalone integration. Source package metadata and rights: README.md. */
+/* tool-escala-de-hunt-hess · Elucenia · https://github.com/Elucenia/tool-escala-de-hunt-hess
+   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+   Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"escala-de-hunt-hess","title":"Escala de Hunt-Hess","fields":[["grau","Quadro clínico","sel",{"opts":{"1":"I – Assintomático ou cefaleia mínima e leve rigidez de nuca","2":"II – Cefaleia moderada a grave, rigidez de nuca; sem déficit além de paralisia de nervo craniano","3":"III – Sonolência, confusão ou déficit focal leve","4":"IV – Estupor, hemiparesia moderada a grave; possível rigidez de descerebração precoce e distúrbios vegetativos","5":"V – Coma profundo, rigidez de descerebração, aparência moribunda"}}]],"config":{"unit":"de 5","label":"Grau de Hunt-Hess","fields":[["grau","sel",0]],"bands":[[1,"low","Grau I: mortalidade cirúrgica de 11% na série original",""],[2,"low","Grau II: mortalidade cirúrgica de 26% na série original",""],[3,"mid","Grau III: mortalidade cirúrgica de 37% na série original",""],[4,"high","Grau IV: mortalidade cirúrgica de 71% na série original",""],[5,"high","Grau V: mortalidade cirúrgica de 100% na série original",""]]},"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};
